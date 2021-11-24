@@ -1,0 +1,4 @@
+#!/bin/zsh
+
+docker build -t petrov/anaconda:1.0 .
+#docker run -i -t -v "/Users/petrov/Repositories/jupyter-notebooks:/opt/notebooks" --rm --name anaconda -p 9999:8888 petrov/anaconda:1.0
