@@ -1,0 +1,21 @@
+version: "3"
+services:
+  conda:
+    build: conda/
+    volumes:
+      - "/Users/petrov/Repositories/jupyter-notebooks:/opt/notebooks"
+    ports:
+      - 9999:8888
+  db:
+    image: postgres:latest
+    expose:
+      - 5432
+    volumes:
+      - "/Users/petrov/docker/volumes/analytical_db:/var/lib/postgresql/data"
+    environment:
+      POSTGRES_DB: "analytical"
+      POSTGRES_USER: "petrov"
+      POSTGRES_PASSWORD: 1111
+    ports:
+      - 5432:5432
+
