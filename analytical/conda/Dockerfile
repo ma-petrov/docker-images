@@ -3,6 +3,7 @@ EXPOSE 8888
 RUN mkdir /opt/notebooks
 RUN pip3 install --upgrade pip
 RUN pip3 install psycopg2-binary
+RUN pip3 install cx_Oracle
 RUN pip3 install plotly
 RUN pip3 install requests-toolbelt
 RUN pip3 install Pillow

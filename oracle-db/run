@@ -1,0 +1,7 @@
+docker run --name oracle-db \
+-p 1521:1521 -p 5500:5500 \
+-e ORACLE_SID=admin \
+-e ORACLE_PDB=admin1 \
+-e ORACLE_PWD=adminpassword \
+-v /Users/petrov/docker/volumes/oracle_db:/opt/oracle/oradata \
+mapetrov/oracledb:v1

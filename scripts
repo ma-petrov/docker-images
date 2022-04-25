@@ -1,0 +1,5 @@
+#!/bin/zsh
+
+# Поиск контейнеров, созданных из заданного контейнера, остановка и удаление
+image=analytical_conda
+docker ps | grep $image | awk '{print $1}' | xargs docker stop | xargs docker rm

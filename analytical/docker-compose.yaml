@@ -4,6 +4,12 @@ services:
     build: conda/
     volumes:
       - "/Users/petrov/Repositories/jupyter-notebooks:/opt/notebooks"
+    environment:
+      HOST: "db"
+      PORT: "5432"
+      POSTGRES_DB: "analytical"
+      POSTGRES_USER: "petrov"
+      POSTGRES_PASSWORD: 1111
     ports:
       - 9999:8888
   db:
